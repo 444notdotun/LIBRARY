@@ -17,8 +17,7 @@ public class BookServiceImpl implements BookService{
     }
 
     private void validateBook(AddBookRequest addBookRequest){
-        if(addBookRequest == null){
+        if(addBookRequest == null)
             throw new ValidateBook("BOOK IS NULL");
-        }
     }
 }

@@ -44,9 +44,11 @@ public class BookServiceImplTest {
 
     @Test
     public void  addBook_throwsErrorIfRequestIsNullTest(){
+        addBookRequest = null;
       assertThrows(ValidateBook.class,()->  bookService.addBook(addBookRequest));
 
     }
+
 
 
 
