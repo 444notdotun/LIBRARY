@@ -5,14 +5,14 @@ import dtos.requests.AddBookRequest;
 import dtos.responses.AddBookResponse;
 
 public class Mapper {
-
-    public static void mapRequestToBook(AddBookRequest request){
+    public static Book mapRequestToBook(AddBookRequest request){
         Book book = new Book();
         book.setName(request.getBookName());
         book.setEdition(request.getEdition());
         book.setDescription(request.getDescription());
         book.setAuthor(request.getAuthor());
         book.setQuality(request.getQuantity());
+        return book;
     }
 
 

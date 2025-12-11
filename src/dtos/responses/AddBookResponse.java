@@ -1,8 +1,5 @@
 package dtos.responses;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class AddBookResponse {
     public String getBookName() {
         return bookName;
@@ -28,7 +25,7 @@ public class AddBookResponse {
         this.description = description;
     }
 
-    public int getEdition() {
+    public String getEdition() {
         return edition;
     }
 

@@ -1,15 +1,17 @@
 package services;
 
 
-import data.models.Book;
+
 import data.respositories.BookRepositoryImpl;
 import data.respositories.BookRespository;
 import dtos.requests.AddBookRequest;
-import dtos.responses.AddBookResponse;
+import exceptions.ValidateBook;
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertThrows;
 
 public class BookServiceImplTest {
 
@@ -23,6 +25,11 @@ public class BookServiceImplTest {
         bookRespository = new BookRepositoryImpl();
     }
 
+    @After
+    public void teardown(){
+        bookRespository.deleteAll();
+    }
+
     @Test
     public void addBookTest(){
         addBookRequest.setBookName("life of dotun");
@@ -32,10 +39,14 @@ public class BookServiceImplTest {
         addBookRequest.setQuantity(9);
         bookService.addBook(addBookRequest);
         assertEquals(1,bookRespository.getcount());
+        assertEquals("Adedotun",bookRespository.findById(1).getAuthor());
     }
 
-//    @Test
-//    public void
+    @Test
+    public void  addBook_throwsErrorIfRequestIsNullTest(){
+      assertThrows(ValidateBook.class,()->  bookService.addBook(addBookRequest));
+
+    }
 
 
 
