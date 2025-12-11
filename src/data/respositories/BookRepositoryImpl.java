@@ -1,7 +1,6 @@
 package data.respositories;
 
 import data.models.Book;
-import exceptions.ValidateNullObjectException;
 
 import java.util.ArrayList;
 
@@ -19,11 +18,11 @@ public class BookRepositoryImpl implements BookRespository{
     @Override
     public Book save(Book book) {
         if(book == null) return null;
-        if(isNew(book)){ saveBook(book);return book;}
+        if(isNew(book)){ saveNewBook(book);return book;}
         update(book);return book;}
    private boolean isNew(Book book){return book.getId() == 0;}
 
-   private void saveBook (Book book) {count++;listOfBooks.add(book);listOfBooks.get(count - 1).setId(count);
+   private void saveNewBook(Book book) {count++;listOfBooks.add(book);listOfBooks.get(count - 1).setId(count);
     }
     private void update (Book book){deleteById((book.getId()));listOfBooks.add(book);
     }
