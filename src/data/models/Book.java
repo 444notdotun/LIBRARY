@@ -9,6 +9,7 @@ public class Book {
     private  String description;
     private int quantity;
     private int edition;
+    private Genre genre;
 
     public int getId() {
         return Id;
@@ -48,6 +49,14 @@ public class Book {
 
     public void setAuthor(String author) {
         this.author = author;
+    }
+
+    public Genre getGenre() {
+        return genre;
+    }
+
+    public void setGenre(Genre genre) {
+        this.genre = genre;
     }
 
     public int getIsbn() {
