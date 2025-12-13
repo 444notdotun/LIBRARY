@@ -4,7 +4,7 @@ package data.models;
 public class Book {
     private String name;
     private String author;
-    private int isbn;
+    private String isbn;
     private int page;
     private  String description;
     private int quantity;
@@ -59,11 +59,11 @@ public class Book {
         this.genre = genre;
     }
 
-    public int getIsbn() {
+    public String getIsbn() {
         return isbn;
     }
 
-    public void setIsbn(int isbn) {
+    public void setIsbn(String isbn) {
         this.isbn = isbn;
     }
 
@@ -75,11 +75,11 @@ public class Book {
         this.description = description;
     }
 
-    public int getQuality() {
+    public int getQuantity() {
         return quantity;
     }
 
-    public void setQuality(int quality) {
+    public void setQuantity(int quality) {
         this.quantity = quality;
     }
 

@@ -110,4 +110,15 @@ public class BookRepositoryTest {
 
     }
 
+
+    @Test
+    public void allBooksCnaBeViewed(){
+        book = new Book();
+        Book newOba = new Book();
+        bookRespository.save(book);
+        bookRespository.save(newOba);
+        assertNotNull(bookRespository.returnAllBooks());
+
+
+    }
 }

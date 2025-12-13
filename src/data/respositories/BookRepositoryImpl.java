@@ -44,11 +44,10 @@ public class BookRepositoryImpl implements BookRespository{
     @Override
     public void deleteAll() {listOfBooks.clear();}
 
-
-
-
-
-
+    @Override
+    public ArrayList<Book> returnAllBooks() {
+        return listOfBooks;
+    }
 
 
 }

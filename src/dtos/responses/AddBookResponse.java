@@ -1,5 +1,7 @@
 package dtos.responses;
 
+import data.models.Genre;
+
 public class AddBookResponse {
     public String getBookName() {
         return bookName;
@@ -46,8 +48,14 @@ public class AddBookResponse {
     private String description;
     private String edition;
     private String author;
+    private Genre genre;
 
+    public Genre getGenre() {
+        return genre;
+    }
 
-
+    public void setGenre(Genre genre) {
+        this.genre = genre;
+    }
 }
 

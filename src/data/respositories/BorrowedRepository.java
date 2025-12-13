@@ -1,18 +1,19 @@
 package data.respositories;
 
 import data.models.Book;
+import data.models.BorrowedBooks;
 
 public interface BorrowedRepository {
 
     long getCount();
 
-    Book save(Book book);
+    BorrowedBooks save(BorrowedBooks book);
 
-    Book findById(int Id);
+    BorrowedBooks findById(int Id);
 
     boolean existsById(int Id);
 
-    void delete(Book element);
+    void delete(BorrowedBooks element);
 
     void deleteById(int Id);
 

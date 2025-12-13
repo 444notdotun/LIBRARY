@@ -6,6 +6,7 @@ public class BorrowedBooks {
     private String BorrowedDate;
     private  String ReturnData;
     private boolean isReturned;
+    private int borrowId;
 
     public int getBookId() {
         return bookId;
@@ -13,6 +14,14 @@ public class BorrowedBooks {
 
     public void setBookId(int bookId) {
         this.bookId = bookId;
+    }
+
+    public int getBorrowId() {
+        return borrowId;
+    }
+
+    public void setBorrowId(int borrowId) {
+        this.borrowId = borrowId;
     }
 
     public int getUserId() {
