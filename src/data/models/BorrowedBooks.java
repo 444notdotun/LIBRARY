@@ -1,11 +1,22 @@
 package data.models;
 
+import java.time.LocalDate;
+
 public class BorrowedBooks {
     private int bookId;
+
+    public BorrowStatus getBorrowStatus() {
+        return borrowStatus;
+    }
+
+    public void setBorrowStatus(BorrowStatus borrowStatus) {
+        this.borrowStatus = borrowStatus;
+    }
+
     private int userId;
-    private String BorrowedDate;
-    private  String ReturnData;
-    private boolean isReturned;
+    private LocalDate borrowedDate;
+    private  LocalDate returnDate;
+    private BorrowStatus borrowStatus;
     private int borrowId;
 
     public int getBookId() {
@@ -32,27 +43,27 @@ public class BorrowedBooks {
         this.userId = userId;
     }
 
-    public String getBorrowedDate() {
-        return BorrowedDate;
+    public LocalDate getBorrowedDate() {
+        return borrowedDate;
     }
 
-    public void setBorrowedDate(String borrowedDate) {
-        BorrowedDate = borrowedDate;
+    public void setBorrowedDate(LocalDate borrowedDate) {
+        this.borrowedDate = borrowedDate;
     }
 
-    public String getReturnData() {
-        return ReturnData;
+    public LocalDate getReturnDate() {
+        return returnDate;
     }
 
-    public void setReturnData(String returnData) {
-        ReturnData = returnData;
+    public void setReturnDate(LocalDate returnDate) {
+        this.returnDate = returnDate;
     }
 
-    public boolean isReturned() {
-        return isReturned;
+    public BorrowStatus isReturned() {
+        return borrowStatus;
     }
 
-    public void setReturned(boolean returned) {
-        isReturned = returned;
+    public void setReturned(BorrowStatus returned) {
+        borrowStatus = returned;
     }
 }

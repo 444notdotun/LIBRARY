@@ -1,5 +1,6 @@
 package data.respositories;
 
+import data.models.BorrowStatus;
 import data.models.BorrowedBooks;
 import org.junit.Before;
 import org.junit.Test;
@@ -10,7 +11,7 @@ public class BorrowedRespositoryTest {
     BorrowedRepository borrowedBookRepositoryImplementation;
     @Before
     public void setUp() {
-        borrowedBookRepositoryImplementation = new BorrowedRepositoryimpl();
+        borrowedBookRepositoryImplementation = new BorrowedRepositoryImpl();
     }
 
     @Test
@@ -86,7 +87,7 @@ public class BorrowedRespositoryTest {
     public void saveBorrowedBook_IsReturnedValueIsFalse(){
         BorrowedBooks book = new BorrowedBooks();
         borrowedBookRepositoryImplementation.save(book);
-        assertFalse(book.isReturned());
+        assertEquals(BorrowStatus.BORROWED,book.isReturned());
     }
 
     @Test

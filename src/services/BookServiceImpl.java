@@ -16,7 +16,9 @@ public class BookServiceImpl implements BookService{
     @Override
     public AddBookResponse addBook(AddBookRequest request) {
         validateBook(request);
-       return Mapper.mapBookDetailsToResponse(bookRespository.save( Mapper.mapRequestToBook(request)));
+        Book book = Mapper.mapRequestToBook(request);
+        bookRespository.save(book);
+       return Mapper.mapBookDetailsToResponse(book);
     }
 
     @Override

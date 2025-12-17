@@ -4,25 +4,35 @@ import java.util.ArrayList;
 
 public class User {
     private String name;
-    private int id;
+    private int userId;
     private String number;
     private String address;
-    private ArrayList<BorrowedBooks> books = new ArrayList<>();
+    private String eMail;
+    private ArrayList<Book> borrowedBooks = new ArrayList<>();
+
 
     public String getName() {
         return name;
+    }
+
+    public String geteMail() {
+        return eMail;
+    }
+
+    public void seteMail(String eMail) {
+        this.eMail = eMail;
     }
 
     public void setName(String name) {
         this.name = name;
     }
 
-    public int getId() {
-        return id;
+    public int getUserId() {
+        return userId;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setUserId(int userId) {
+        this.userId = userId;
     }
 
     public String getNumber() {
@@ -41,11 +51,11 @@ public class User {
         this.address = address;
     }
 
-    public ArrayList<BorrowedBooks> getBooks() {
-        return books;
+    public ArrayList<Book> getBorrowedBooks() {
+        return borrowedBooks;
     }
 
-    public void setBooks(BorrowedBooks book) {
-        books.add(book);
+    public void setBorrowedBooks(Book book) {
+        borrowedBooks.add(book);
     }
 }

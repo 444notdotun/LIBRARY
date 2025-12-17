@@ -5,6 +5,15 @@ public class BorrowBookRequest {
     private String Author;
     private  int edition;
     private int userId;
+    private int days;
+
+    public int getDays() {
+        return days;
+    }
+
+    public void setDays(int days) {
+        this.days = days;
+    }
 
     public String getBookname(){
         return bookname;

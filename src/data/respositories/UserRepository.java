@@ -1,12 +1,14 @@
 package data.respositories;
 
-import data.models.BorrowedBooks;
 import data.models.User;
 
-public interface UserRespository {
+import java.util.List;
+
+public interface UserRepository {
+    List<User> getUserList();
     long getCount();
 
-   User save(BorrowedBooks book);
+    User save(User user);
 
     User findById(int Id);
 
